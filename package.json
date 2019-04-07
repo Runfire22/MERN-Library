@@ -1,0 +1,32 @@
+{
+  "name": "mern-library",
+  "version": "1.0.0",
+  "description": "Library app made with the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Runfire22/MERN-Library.git"
+  },
+  "author": "Christian Wendelboe-Nielsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Runfire22/MERN-Library/issues"
+  },
+  "homepage": "https://github.com/Runfire22/MERN-Library#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.22"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
