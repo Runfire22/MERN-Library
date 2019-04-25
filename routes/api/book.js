@@ -4,7 +4,7 @@ var Genre = require('../../models/genre');
 var BookInstance = require('../../models/bookinstance');
 var async = require('async');
 
-const { body, validationResult } = require('exress-validator/check');
+const { body, validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 
 exports.index = function(req, res) {
@@ -32,7 +32,8 @@ exports.book_list = function(req, res, next) {
     .exec(function (err, list_books) {
         if (err) { return next(err); }
 
-        res.render('book_list', { title: 'Book List', book_list: list_books });
+        //res.render('book_list', { title: 'Book List', book_list: list_books });
+        res.json(list_books);
     });
 };
 
